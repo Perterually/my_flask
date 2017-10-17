@@ -63,4 +63,3 @@ def load_user(username):
     return User.query.filter_by(username=username).first()
 
 
-@app.route
