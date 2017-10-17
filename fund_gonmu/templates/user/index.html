@@ -1,0 +1,19 @@
+{% extends "user/layout.html" %}
+{% block content %}
+{% if session['loggg'] %}
+        {% if data %}
+        <h3>{{data}}</h3>
+        {% else %}
+
+        <a href="/logout">Logout</a> <br> <br>
+        <form action="" method="POST">
+          <input type="username" name="username" placeholder="Instagram Username">
+          <input type="submit" value="Finds">
+        </form>
+        {% endif %}
+{% else %}
+<p>Not login!</p>   
+<a href="/login">Login</a> 
+<a href="/signup">Signup</a>   
+{% endif %}
+{% endblock %}

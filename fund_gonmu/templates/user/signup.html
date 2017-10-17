@@ -1,0 +1,10 @@
+{% extends "/user/layout.html" %}
+<title>{% block title %} signup {% endblock %}</title>
+{% block content %}
+<form method="POST" action="/signup">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }} {{ form.username }}
+    {{ form.password.label }} {{ form.password(size=20) }}
+    <input type="submit" value="Signup">
+</form>
+{% endblock %}
